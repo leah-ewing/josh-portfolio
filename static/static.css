@@ -7,7 +7,10 @@
     margin-left: -200px;
 }
 
-#homepage-contact-link {
+#homepage-contact-link,
+#resume-contact-link,
+#music-slideshow,
+#nature-slideshow {
     text-align: center;
     position: fixed;
     bottom: 0;
@@ -15,10 +18,33 @@
     right: 0;
 }
 
-#about-me-title {
+#about-me-title,
+#music-title,
+#resume-title,
+#music-links,
+#about-slideshow,
+#contact-link,
+#nature-title,
+#nature-links,
+#music-display-window,
+#nature-display-window,
+#resume-display-window,
+#resume-links {
     text-align: center;
 }
 
-#about-slideshow {
-    text-align: center;
+#music-education-profile,
+#music-work-experience-profile,
+#music-production-experience-profile,
+#songwriting-highlights-profile,
+#music-gig-highlights-profile,
+#music-other-experience-profile,
+#nature-work-experience-profile,
+#through-hiking-experience-profile,
+#nature-certifications-profile,
+#nature-gallery-profile,
+#resume-work-experience-profile,
+#resume-education-profile,
+#resume-skills-profile {
+    display: none;
 }

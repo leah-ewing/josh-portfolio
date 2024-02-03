@@ -22,14 +22,14 @@ def about_page():
 
 @app.route('/music')
 def music_page():
-    """ Directs a user to the 'music portfolio' page """
+    """ Directs a user to the 'music' page """
 
     return render_template("music.html")
 
 
 @app.route('/nature')
 def nature_page():
-    """ Directs a user to the 'nature experience' page """
+    """ Directs a user to the 'nature' page """
 
     return render_template("nature.html")
 
