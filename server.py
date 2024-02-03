@@ -29,7 +29,7 @@ def music_page():
 
 @app.route('/nature')
 def nature_page():
-    """ Directs a user to the 'nature/recreation experience' page """
+    """ Directs a user to the 'nature experience' page """
 
     return render_template("nature.html")
 
