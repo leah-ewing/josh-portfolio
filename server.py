@@ -36,7 +36,10 @@ def music_page():
 def nature_page():
     """ Directs a user to the 'nature' page """
 
-    return render_template("nature.html")
+    trip_names = crud.get_all_trip_names()
+
+    return render_template("nature.html",
+                           trip_names = trip_names)
 
 
 @app.route('/resume')
@@ -51,11 +54,12 @@ def gallery_page(trip_name):
     """ Directs a user to the 'gallery' page """
 
     trip = crud.get_trip_by_name(trip_name)
-    trip_images = crud.get_trip_images_by_id(trip.trip_id) # returns an array of image information
+    trip_images = crud.get_trip_images_by_id(trip.trip_id)
 
     return render_template("gallery.html",
                            trip_name = trip.trip_name,
-                           trip_description = trip.trip_description) # add trip images
+                           trip_description = trip.trip_description,
+                           trip_images = trip_images)
 
 
 @app.route('/image_info/<image_id>', methods = ["GET"])

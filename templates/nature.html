@@ -122,13 +122,14 @@
             </h3>
             <br>
             <div id="nature-gallery-list">
-                <text>
-                    - <a href="/gallery/John Muir Trail" id="john-muir-trail-gallery-link">John Muir Trail</a><br>
-                    - <a href="/gallery/Great Smoky Mountains National Park" id="smokies-gallery-link">Great Smoky Mountains National Park</a> <br>
-                    - <a href="/gallery/Grand Canyon National Park" id="grand-canyon-gallery-link">Grand Canyon National Park</a> <br>
-                    - <a href="/gallery/Sierra High Route" id="sierra-high-route-gallery-link">Sierra High Route</a> <br>
+                {% for trip_name in trip_names %}
+                    <ol id="location-list">
+                        - <a href="/gallery/{{ trip_name }}">{{ trip_name }}</a>
+                    </ol>
+                {% endfor %}
+                <ol>
                     - etc...
-                </text>
+                </ol>
             </div>
         </div>
     </div>

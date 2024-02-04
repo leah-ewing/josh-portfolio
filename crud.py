@@ -61,6 +61,18 @@ def get_trip_images_by_id(trip_id):
             trip_images.append(image)
     
     return trip_images
+
+
+def get_all_trip_names():
+    """ Returns a list of all trip names in the db """
+
+    trips = Trip.query.all()
+    trip_names = []
+    
+    for trip in trips:
+        trip_names.append(trip.trip_name)
+    
+    return trip_names
             
 
 if __name__ == '__main__':

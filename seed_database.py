@@ -28,13 +28,13 @@ trips = [{
         },
         {
             'trip_name': 'Grand Canyon National Park',
-            'trip_location': 'Gatlinburg, TN',
+            'trip_location': 'Grand Canyon, AZ',
             'trip_date': '2014',
             'trip_description': 'Sit amet venenatis urna cursus eget nunc scelerisque viverra mauris. Non arcu risus quis varius quam quisque id diam. Pulvinar mattis nunc sed blandit libero volutpat sed.'
         },
         {
             'trip_name': 'Sierra High Route',
-            'trip_location': 'Gatlinburg, TN',
+            'trip_location': 'Yosemite National Park',
             'trip_date': '2018',
             'trip_description': 'Sit amet venenatis urna cursus eget nunc scelerisque viverra mauris. Non arcu risus quis varius quam quisque id diam. Pulvinar mattis nunc sed blandit libero volutpat sed.'
         }]
