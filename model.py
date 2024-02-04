@@ -32,6 +32,7 @@ class Image(db.Model):
     """ Images Corresponding to a Trip """
 
     __tablename__ = 'image'
+    
     image_id = db.Column(db.Integer, 
                         autoincrement = True,
                         primary_key = True)

@@ -1,0 +1,1 @@
+export ROOT_FOLDER="/Users/leahewing/Documents/Repositories/Josh-Portfolio"
