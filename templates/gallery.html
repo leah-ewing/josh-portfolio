@@ -29,13 +29,21 @@
     </h6>
   </div>
 
-  <br><br><br>
+  <br><br>
 
-  <div id="gallery-images">
-    <h3>
-      images will go here
-    </h3>
-  </div>
+  <section id="gallery-images">
+    {% for image in trip_images %}
+      <a id = "gallery-image" href = "/image_info/{{image.image_id}}">
+        <img
+            src = "{{image.image_url}}"
+            width = 300
+            alt = "{{ trip_name }} - {{ trip_date }}">
+        </img>
+    </a>
+    {% endfor %}
+  </section>
+
+  <br><br>
 
   <div id="gallery-contact-footer">
     Contact | <a href = "mailto: joshmiller.ca@gmail.com">Email</a> | <a href="https://www.linkedin.com/in/josh-miller-a8457050/">LinkedIn</a> | <a href="https://github.com/joshmillerdev">Github</a>

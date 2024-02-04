@@ -1,8 +1,29 @@
-<!-- will have larger version if image and it's description
-http get request will have image_id -->
+{% extends 'base.html' %}
 
-12345
- 678
-90123 - 13
- 456
-78901 - 21
+<title>
+  {% block title %}Image Info{% endblock %}
+</title>
+
+{% block body %}
+
+<body>
+
+  <!-- CSS -->
+  <link
+  rel="stylesheet"
+  href="../static/static.css">
+
+  <div id="image-info-text">
+    <h1>
+      Image Info
+    </h1>
+
+    <div id="image-info-contact-footer">
+      Contact | <a href = "mailto: joshmiller.ca@gmail.com">Email</a> | <a href="https://www.linkedin.com/in/josh-miller-a8457050/">LinkedIn</a> | <a href="https://github.com/joshmillerdev">Github</a>
+      <br><br>
+    </div>
+  </div>
+
+</body>
+
+{% endblock %}
