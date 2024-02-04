@@ -48,7 +48,7 @@ def contact_page():
     return render_template("contact.html")
 
 
-@app.route('/gallery/<trip_name>')
+@app.route('/gallery/<trip_name>', methods = ["GET"])
 def gallery_page(trip_name):
     """ Directs a user to a 'Gallery' page """
 
@@ -58,7 +58,7 @@ def gallery_page(trip_name):
         trip_name = 'Great Smoky Mountain National Park'
     elif trip_name == 'grand-canyon':
         trip_name = 'Grand Canyon National Park'
-    elif trip_name == 'sierra-high-route':
+    elif trip_name == 'shr':
         trip_name = 'Sierra High Route'
 
     return render_template("gallery.html",
