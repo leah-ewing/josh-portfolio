@@ -29,9 +29,39 @@ def create_image(image_url, image_description, trip_id):
 
     return new_image
 
-## crud.get_trip_by_name(trip_name)
-## crud.get_image_from_id(image_id)
-## crud.get_trip_images_by_id(trip_id)
+
+def get_trip_by_name(trip_name):
+    """ Returns information for a trip, given a name """
+
+    trips = Trip.query.all()
+
+    for trip in trips:
+        if trip.trip_name == trip_name:
+            return trip
+        
+
+def get_image_from_id(image_id):
+    """ Returns information for an image, given an id """
+
+    images = Image.query.all()
+
+    for image in images:
+        if image.image_id == image_id:
+            return image
+
+
+def get_trip_images_by_id(trip_id):
+    """ Returns images for a trip given a trip_id """
+
+    images = Image.query.all()
+    trip_images = []
+
+    for image in images:
+        if image.trip_id == trip_id:
+            trip_images.append(image)
+    
+    return trip_images
+            
 
 
 if __name__ == '__main__':

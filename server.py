@@ -3,10 +3,12 @@ from jinja2 import StrictUndefined
 import crud, json
 from datetime import datetime
 
+
 app = Flask(__name__)
 app.secret_key = 'dev'
 app.static_folder = 'static'
 app.app_context().push()
+
 
 @app.route('/')
 def homepage():
@@ -45,10 +47,10 @@ def resume_page():
 
 @app.route('/gallery/<trip_name>', methods = ["GET"])
 def gallery_page(trip_name):
-    """ Directs a user to a 'gallery' page """
+    """ Directs a user to the 'gallery' page """
 
     trip = crud.get_trip_by_name(trip_name)
-    trip_images = crud.get_trip_images_by_id(trip.trip_id)
+    trip_images = crud.get_trip_images_by_id(trip.trip_id) # returns an array of image information
 
     return render_template("gallery.html",
                            trip_name = trip.trip_name,
