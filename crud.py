@@ -63,7 +63,6 @@ def get_trip_images_by_id(trip_id):
     return trip_images
             
 
-
 if __name__ == '__main__':
     from server import app
     connect_to_db(app)

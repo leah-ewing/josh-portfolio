@@ -2,6 +2,7 @@ from flask import Flask, render_template
 from jinja2 import StrictUndefined
 import crud, json
 from datetime import datetime
+from model import connect_to_db
 
 
 app = Flask(__name__)
@@ -72,4 +73,5 @@ def image_info_page(image_id):
 
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=8000)
+    connect_to_db(app)
+    app.run(host='0.0.0.0', debug=True, port=8000)
