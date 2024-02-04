@@ -58,6 +58,7 @@ def gallery_page(trip_name):
 
     return render_template("gallery.html",
                            trip_name = trip.trip_name,
+                           trip_date = trip.trip_date,
                            trip_description = trip.trip_description,
                            trip_images = trip_images)
 
