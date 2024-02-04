@@ -41,5 +41,29 @@ def resume_page():
     return render_template("resume.html")
 
 
+@app.route('/contact')
+def contact_page():
+    """ Directs a user to a 'Contact' page """
+
+    return render_template("contact.html")
+
+
+@app.route('/gallery/<trip_name>')
+def gallery_page(trip_name):
+    """ Directs a user to a 'Gallery' page """
+
+    if trip_name == 'jmt':
+        trip_name = 'John Muir Trail'
+    elif trip_name == 'smokies':
+        trip_name = 'Great Smoky Mountain National Park'
+    elif trip_name == 'grand-canyon':
+        trip_name = 'Grand Canyon National Park'
+    elif trip_name == 'sierra-high-route':
+        trip_name = 'Sierra High Route'
+
+    return render_template("gallery.html",
+                           trip_name = trip_name)
+
+
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=8000)

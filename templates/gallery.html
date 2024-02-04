@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+<title>
+  {% block title %}John Muir Trail{% endblock %}
+</title>
+
+{% block body %}
+
+<body>
+
+  <!-- CSS -->
+  <link
+  rel="stylesheet"
+  href="../static/static.css">
+
+  <a href='/'>Home</a> | <a href="javascript:history.back()">Go Back</a>
+
+  <br><br>
+
+  <div id="gallery-title">
+    <h1>
+      <u>{{ trip_name }}</u>
+    </h1>
+  </div>
+
+</body>
+
+{% endblock %}

@@ -29,7 +29,9 @@
 #music-display-window,
 #nature-display-window,
 #resume-display-window,
-#resume-links {
+#resume-links,
+#gallery-title,
+#contact-title {
     text-align: center;
 }
 
