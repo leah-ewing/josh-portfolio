@@ -50,3 +50,21 @@
 #resume-skills-profile {
     display: none;
 }
+
+#music-education-text,
+#music-work-experience-text,
+#music-production-experience-text,
+#songwriting-highlights-text,
+#music-gig-highlights-text,
+#music-other-experience-text,
+#nature-work-experience-text,
+#through-hiking-experience-text,
+#nature-certifications-text,
+#nature-gallery-text,
+#resume-work-experience-text,
+#resume-education-text,
+#resume-skills-text {
+    display: inline-block;
+    max-width: 600px;
+    text-align: justify;
+}

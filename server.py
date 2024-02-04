@@ -41,17 +41,11 @@ def resume_page():
     return render_template("resume.html")
 
 
-@app.route('/contact')
-def contact_page():
-    """ Directs a user to a 'Contact' page """
-
-    return render_template("contact.html")
-
-
 @app.route('/gallery/<trip_name>', methods = ["GET"])
 def gallery_page(trip_name):
-    """ Directs a user to a 'Gallery' page """
+    """ Directs a user to a 'gallery' page """
 
+    # Remove when db gets seeded
     if trip_name == 'jmt':
         trip_name = 'John Muir Trail'
     elif trip_name == 'smokies':
