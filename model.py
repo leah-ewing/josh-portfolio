@@ -29,7 +29,7 @@ class Trip(db.Model):
 
 
 class Image(db.Model):
-    """ Trip Images Corresponding to a Trip """
+    """ Images Corresponding to a Trip """
 
     __tablename__ = 'image'
     image_id = db.Column(db.Integer, 
