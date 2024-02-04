@@ -21,7 +21,7 @@ trips = [{
             'trip_description': 'Sit amet venenatis urna cursus eget nunc scelerisque viverra mauris. Non arcu risus quis varius quam quisque id diam. Pulvinar mattis nunc sed blandit libero volutpat sed.'
         },
         {
-            'trip_name': 'Smoky Mountains National Park',
+            'trip_name': 'Great Smoky Mountains National Park',
             'trip_location': 'Gatlinburg, TN',
             'trip_date': '2021-2023',
             'trip_description': 'Sit amet venenatis urna cursus eget nunc scelerisque viverra mauris. Non arcu risus quis varius quam quisque id diam. Pulvinar mattis nunc sed blandit libero volutpat sed.'
