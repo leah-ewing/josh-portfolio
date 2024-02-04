@@ -29,6 +29,10 @@ def create_image(image_url, image_description, trip_id):
 
     return new_image
 
+## crud.get_trip_by_name(trip_name)
+## crud.get_image_from_id(image_id)
+## crud.get_trip_images_by_id(trip_id)
+
 
 if __name__ == '__main__':
     from server import app

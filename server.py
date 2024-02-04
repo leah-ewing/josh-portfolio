@@ -47,18 +47,26 @@ def resume_page():
 def gallery_page(trip_name):
     """ Directs a user to a 'gallery' page """
 
-    # Remove when db gets seeded
-    if trip_name == 'jmt':
-        trip_name = 'John Muir Trail'
-    elif trip_name == 'smokies':
-        trip_name = 'Great Smoky Mountain National Park'
-    elif trip_name == 'grand-canyon':
-        trip_name = 'Grand Canyon National Park'
-    elif trip_name == 'shr':
-        trip_name = 'Sierra High Route'
+    trip = crud.get_trip_by_name(trip_name)
+    trip_images = crud.get_trip_images_by_id(trip.trip_id)
 
     return render_template("gallery.html",
-                           trip_name = trip_name)
+                           trip_name = trip.trip_name,
+                           trip_description = trip.trip_description) # add trip images
+
+
+@app.route('/image_info', methods = "GET")
+def image_info_page(image_id):
+    """ Directs a user to an image's info page """
+
+    image = crud.get_image_from_id(image_id)
+    trip = crud.get_trip_from_id(image.trip_id)
+
+    return render_template("image_info.html",
+                           trip_name = trip.trip_name,
+                           trip_location = trip.trip_location,
+                           trip_date = trip.trip_date,
+                           image_description = image.image_description)
 
 
 if __name__ == '__main__':

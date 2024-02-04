@@ -9,6 +9,7 @@
 
 #homepage-contact-footer,
 #resume-contact-footer,
+#gallery-contact-footer,
 #music-footer,
 #nature-footer {
     text-align: center;
@@ -30,8 +31,7 @@
 #nature-display-window,
 #resume-display-window,
 #resume-links,
-#gallery-title,
-#contact-title {
+#gallery-title {
     text-align: center;
 }
 
