@@ -35,4 +35,5 @@ class Image(db.Model):
                         autoincrement = True,
                         primary_key = True)
     image_url = db.Column(db.String)
+    image_description = db.Column(db.String)
     trip_id = db.Column(db.String, db.ForeignKey('trip.trip_id'))

@@ -7,10 +7,10 @@
     margin-left: -200px;
 }
 
-#homepage-contact-link,
-#resume-contact-link,
-#music-slideshow,
-#nature-slideshow {
+#homepage-contact-footer,
+#resume-contact-footer,
+#music-footer,
+#nature-footer {
     text-align: center;
     position: fixed;
     bottom: 0;
@@ -23,7 +23,7 @@
 #resume-title,
 #music-links,
 #about-slideshow,
-#contact-link,
+#about-contact-footer,
 #nature-title,
 #nature-links,
 #music-display-window,
