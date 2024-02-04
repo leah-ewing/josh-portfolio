@@ -24,6 +24,7 @@ def create_image(image):
     """ Create and return a new image """
 
     new_image = Image(image_url = image.image_url,
+                      image_description = db.Column(db.String),
                       trip_id = image.trip_id)
     
     db.session.add(new_image)
