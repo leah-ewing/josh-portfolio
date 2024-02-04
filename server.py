@@ -55,7 +55,7 @@ def gallery_page(trip_name):
                            trip_description = trip.trip_description) # add trip images
 
 
-@app.route('/image_info', methods = "GET")
+@app.route('/image_info/<image_id>', methods = ["GET"])
 def image_info_page(image_id):
     """ Directs a user to an image's info page """
 
