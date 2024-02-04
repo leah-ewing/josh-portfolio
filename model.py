@@ -25,6 +25,7 @@ class Trip(db.Model):
     trip_name = db.Column(db.String)
     trip_location = db.Column(db.String)
     trip_date = db.Column(db.String)
+    trip_description = db.Column(db.String)
 
 
 class Image(db.Model):
@@ -36,4 +37,13 @@ class Image(db.Model):
                         primary_key = True)
     image_url = db.Column(db.String)
     image_description = db.Column(db.String)
-    trip_id = db.Column(db.String, db.ForeignKey('trip.trip_id'))
+    trip_id = db.Column(db.Integer, db.ForeignKey('trip.trip_id'))
+
+
+if __name__ == '__main__':
+    from server import app
+    
+    db.connect_to_db(app)
+
+    with app.app_context():
+        db.create_all()

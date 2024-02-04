@@ -6,12 +6,13 @@ import psycopg2
 from model import db, connect_to_db, Trip, Image
 
 
-def create_month(trip):
+def create_trip(trip_name, trip_location, trip_date, trip_description):
     """ Create and return a month """
 
-    new_trip = Trip(trip_name = trip.trip_name,
-                    trip_location = trip.trip_location,
-                    trip_date = trip.trip_date)
+    new_trip = Trip(trip_name = trip_name,
+                    trip_location = trip_location,
+                    trip_date = trip_date,
+                    trip_description = trip_description)
 
     db.session.add(new_trip)
     db.session.commit()

@@ -4,7 +4,9 @@ import crud, json
 from datetime import datetime
 
 app = Flask(__name__)
-
+app.secret_key = 'dev'
+app.static_folder = 'static'
+app.app_context().push()
 
 @app.route('/')
 def homepage():
