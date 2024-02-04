@@ -22,7 +22,7 @@ class Trip(db.Model):
     trip_id = db.Column(db.Integer, 
                         autoincrement = True,
                         primary_key = True)
-    trip_name = db.Column(db.String)
+    trip_name = db.Column(db.String, unique = True)
     trip_location = db.Column(db.String)
     trip_date = db.Column(db.String)
     trip_description = db.Column(db.String)
