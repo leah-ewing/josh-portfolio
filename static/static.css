@@ -65,12 +65,18 @@
 #nature-certifications-text,
 #nature-gallery-text,
 #resume-work-experience-text,
-#resume-education-text,
-#resume-skills-text {
+#resume-education-text {
     display: inline-block;
     max-width: 600px;
     text-align: justify;
     margin-bottom: 200px;
+}
+
+#resume-skills-text {
+    display: inline-block;
+    max-width: 600px;
+    text-align: justify;
+    margin-bottom: 100px;
 }
 
 #image-info-description {
