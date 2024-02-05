@@ -1,6 +1,6 @@
 """CRUD operations."""
 
-from model import db, connect_to_db, Trip, Image
+from model import db, connect_to_db, Trip, Image, Slideshow
 
 
 def create_trip(trip_name, trip_location, trip_date, trip_description):
@@ -28,6 +28,18 @@ def create_image(image_url, image_description, trip_id):
     db.session.commit()
 
     return new_image
+
+
+def create_slideshow_image(slideshow_image_url, slideshow_image_category):
+    """ Create and return a new slideshow image """
+
+    new_slideshow_image = Slideshow(slideshow_image_url = slideshow_image_url,
+                      slideshow_image_category = slideshow_image_category)
+    
+    db.session.add(new_slideshow_image)
+    db.session.commit()
+
+    return new_slideshow_image
 
 
 def get_trip_by_name(trip_name):
@@ -83,7 +95,20 @@ def get_trip_from_id(trip_id):
     for trip in trips:
         if trip.trip_id == trip_id:
             return trip
-            
+        
+
+def get_slideshow_images_from_category(slideshow_image_category):
+    """ Returns slideshow images for a given category """
+
+    slideshow_images = Slideshow.query.all()
+    slideshow_image_list = []
+
+    for slideshow_image in slideshow_images:
+        if slideshow_image.slideshow_image_category == slideshow_image_category:
+            slideshow_image_list.append(slideshow_image)
+
+    return slideshow_image_list        
+
 
 if __name__ == '__main__':
     from server import app

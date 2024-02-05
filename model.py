@@ -36,9 +36,21 @@ class Image(db.Model):
     image_id = db.Column(db.Integer, 
                         autoincrement = True,
                         primary_key = True)
-    image_url = db.Column(db.String)
+    image_url = db.Column(db.String, unique = True)
     image_description = db.Column(db.String)
     trip_id = db.Column(db.Integer, db.ForeignKey('trip.trip_id'))
+
+    
+class Slideshow(db.Model):
+    """ Slideshow Images Corresponding to a Category """
+
+    __tablename__ = 'slideshow_image'
+    
+    slideshow_image_id = db.Column(db.Integer, 
+                        autoincrement = True,
+                        primary_key = True)
+    slideshow_image_url = db.Column(db.String, unique = True)
+    slideshow_image_category = db.Column(db.String)
 
 
 if __name__ == '__main__':
