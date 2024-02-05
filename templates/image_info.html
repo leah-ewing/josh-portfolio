@@ -13,10 +13,31 @@
   rel="stylesheet"
   href="../static/static.css">
 
-  <div id="image-info-text">
+  <a href='/'>Home</a> | <a href="javascript:history.back()">Go Back</a>
+
+  <br><br>
+
+  <div id="image-info-title">
     <h1>
-      Image Info
+      <u>{{trip_name}}</u>
     </h1>
+
+    <h3>
+        {{trip_location}} - {{trip_date}}
+    </h3>
+
+    <br>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-auto" id="image-info-image">
+                <img src = "{{image}}"></img>
+            </div>
+            <div class="col align-self-center" id="image-info-description">
+                {{image_description}}
+            </div>
+        </div>
+    </div>
 
     <div id="image-info-contact-footer">
       Contact | <a href = "mailto: joshmiller.ca@gmail.com">Email</a> | <a href="https://www.linkedin.com/in/josh-miller-a8457050/">LinkedIn</a> | <a href="https://github.com/joshmillerdev">Github</a>

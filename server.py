@@ -67,10 +67,11 @@ def gallery_page(trip_name):
 def image_info_page(image_id):
     """ Directs a user to an image's info page """
 
-    image = crud.get_image_from_id(image_id)
+    image = crud.get_image_from_id(int(image_id))
     trip = crud.get_trip_from_id(image.trip_id)
 
     return render_template("image_info.html",
+                           image = image.image_url,
                            trip_name = trip.trip_name,
                            trip_location = trip.trip_location,
                            trip_date = trip.trip_date,

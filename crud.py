@@ -73,6 +73,16 @@ def get_all_trip_names():
         trip_names.append(trip.trip_name)
     
     return trip_names
+
+
+def get_trip_from_id(trip_id):
+    """ Returns a trip given a trip_id """
+
+    trips = Trip.query.all()
+    
+    for trip in trips:
+        if trip.trip_id == trip_id:
+            return trip
             
 
 if __name__ == '__main__':
