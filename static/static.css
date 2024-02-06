@@ -94,7 +94,11 @@
     margin-left: 30px;
 }
 
-#music-slideshow-footer {
+
+/* Slideshow Styling */
+
+#music-slideshow-footer,
+#nature-slideshow-footer {
     text-align: center;
     position: fixed;
     bottom: 0;
@@ -102,16 +106,19 @@
     right: 0;
     font-size: 0;
     white-space: nowrap;
-    background-color: gainsboro;
+    background-color: white;
 }
 
-#music-slideshow-footer text {
+#music-slideshow-footer text,
+#nature-slideshow-footer text {
     font-size: medium;
 }
 
-#music-slideshow-footer img {
+#music-slideshow-footer img,
+#nature-slideshow-footer img {
     padding-bottom: 12px;
 }
+
 
 /* Gallery Image Styling: */
 

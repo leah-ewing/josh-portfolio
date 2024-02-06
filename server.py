@@ -40,9 +40,11 @@ def nature_page():
     """ Directs a user to the 'nature' page """
 
     trip_names = crud.get_all_trip_names()
+    nature_slideshow_images = crud.get_slideshow_images_from_category('nature')
 
     return render_template("nature.html",
-                           trip_names = trip_names)
+                           trip_names = trip_names,
+                           nature_slideshow_images = nature_slideshow_images)
 
 
 @app.route('/resume')

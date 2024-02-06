@@ -135,11 +135,20 @@
     </div>
 
     <div id="nature-slideshow-footer">
-        Nature Slideshow Here
-        <br><br><br>
+        {% for nature_slideshow_image in nature_slideshow_images %}
+            <img
+                id = "nature-slideshow-image"
+                src = "{{nature_slideshow_image}}"
+                width = 150>
+            </img>
+        {% endfor %}
 
-        Contact | <a href = "mailto: joshmiller.ca@gmail.com">Email</a> | <a href="https://www.linkedin.com/in/josh-miller-a8457050/">LinkedIn</a> | <a href="https://github.com/joshmillerdev">Github</a>
-        <br><br>
+        <text id="nature-slideshow-footer-text">
+            <br>
+            Contact | <a href = "mailto: joshmiller.ca@gmail.com">Email</a> | <a href="https://www.linkedin.com/in/josh-miller-a8457050/">LinkedIn</a> | <a href="https://github.com/joshmillerdev">Github</a>
+            <br><br>
+        </text>
+
     </div>
 
     <!-- JAVASCRIPT -->
