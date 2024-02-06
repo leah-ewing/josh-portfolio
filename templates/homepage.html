@@ -21,16 +21,31 @@
     <a href='/about'>About Me</a> | <a href='/music'>Music Portfolio</a> | <a href="/nature">Nature Experience</a> | <a href='/resume'>Resume</a>
 
     <br><br><br><br>
-
-    <div id="homepage-contact-footer">
-      Contact | <a href = "mailto: joshmiller.ca@gmail.com">Email</a> | <a href="https://www.linkedin.com/in/josh-miller-a8457050/">LinkedIn</a> | <a href="https://github.com/joshmillerdev">Github</a>
-
-      <div id="admin-login-logo">
-        <a href="">🐛</a>
-      </div>
-      <br><br>
-    </div>
   </div>
+
+  <div id="homepage-contact-footer">
+    Contact | <a href = "mailto: joshmiller.ca@gmail.com">Email</a> | <a href="https://www.linkedin.com/in/josh-miller-a8457050/">LinkedIn</a> | <a href="https://github.com/joshmillerdev">Github</a>
+
+    <div>
+      <a href id="admin-login-logo">🐛</a>
+    </div>
+    <br><br>
+    
+  </div>
+
+  <div id="login-popup-window">
+      <div id="login-popup-window-text">
+        <h1>
+          <br><br>
+          <b>Login</b>
+        </h1>
+        <br>
+        <a href id="close-button-login-popup-window">Close</a>
+      </div>
+  </div>
+
+  <!-- JAVASCRIPT -->
+  <script src="{{ url_for('static', filename='js/login.js') }}"></script>
 
 </body>
 
