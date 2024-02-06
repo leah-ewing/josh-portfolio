@@ -1,3 +1,5 @@
+/* General Styling */
+
 #homepage-text {
     text-align: center;
     position: fixed;
@@ -11,7 +13,6 @@
 #image-info-contact-footer,
 #resume-contact-footer,
 #gallery-contact-footer,
-#music-slideshow-footer,
 #nature-slideshow-footer {
     text-align: center;
     position: fixed;
@@ -91,6 +92,25 @@
     height: auto;
     width: auto;
     margin-left: 30px;
+}
+
+#music-slideshow-footer {
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 0;
+    white-space: nowrap;
+    background-color: gainsboro;
+}
+
+#music-slideshow-footer text {
+    font-size: medium;
+}
+
+#music-slideshow-footer img {
+    padding-bottom: 12px;
 }
 
 /* Gallery Image Styling: */

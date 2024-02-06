@@ -29,7 +29,10 @@ def about_page():
 def music_page():
     """ Directs a user to the 'music' page """
 
-    return render_template("music.html")
+    music_slideshow_images = crud.get_slideshow_images_from_category('music')
+
+    return render_template("music.html",
+                           music_slideshow_images = music_slideshow_images)
 
 
 @app.route('/nature')

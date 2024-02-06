@@ -105,7 +105,7 @@ def get_slideshow_images_from_category(slideshow_image_category):
 
     for slideshow_image in slideshow_images:
         if slideshow_image.slideshow_image_category == slideshow_image_category:
-            slideshow_image_list.append(slideshow_image)
+            slideshow_image_list.append(slideshow_image.slideshow_image_url)
 
     return slideshow_image_list        
 

@@ -238,11 +238,19 @@
     </div>
 
     <div id="music-slideshow-footer">
-        Music Slideshow Here
-        <br><br><br>
+        {% for music_slideshow_image in music_slideshow_images %}
+            <img
+                id = "music-slideshow-image"
+                src = "{{music_slideshow_image}}"
+                width = 150>
+            </img>
+        {% endfor %}
 
-        Contact | <a href = "mailto: joshmiller.ca@gmail.com">Email</a> | <a href="https://www.linkedin.com/in/josh-miller-a8457050/">LinkedIn</a> | <a href="https://github.com/joshmillerdev">Github</a>
-        <br><br>
+        <text id="music-slideshow-footer-text">
+            <br>
+            Contact | <a href = "mailto: joshmiller.ca@gmail.com">Email</a> | <a href="https://www.linkedin.com/in/josh-miller-a8457050/">LinkedIn</a> | <a href="https://github.com/joshmillerdev">Github</a>
+            <br><br>
+        </text>
 
     </div>
 
