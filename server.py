@@ -22,7 +22,10 @@ def homepage():
 def about_page():
     """ Directs a user to the 'about' page """
 
-    return render_template("about.html")
+    about_slideshow_images = crud.get_slideshow_images_from_category('about')
+
+    return render_template("about.html",
+                           about_slideshow_images = about_slideshow_images)
 
 
 @app.route('/music')

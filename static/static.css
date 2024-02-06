@@ -19,13 +19,13 @@
     bottom: 0;
     left: 0;
     right: 0;
+    background-color: white;
 }
 
 #about-me-title,
 #music-title,
 #resume-title,
 #music-links,
-#about-slideshow,
 #about-contact-footer,
 #nature-title,
 #nature-links,
@@ -64,20 +64,25 @@
 #nature-work-experience-text,
 #through-hiking-experience-text,
 #nature-certifications-text,
-#nature-gallery-text,
-#resume-work-experience-text,
-#resume-education-text {
+#nature-gallery-text {
     display: inline-block;
     max-width: 600px;
     text-align: justify;
     margin-bottom: 200px;
 }
 
-#resume-skills-text {
+#resume-skills-text,
+#resume-work-experience-text,
+#resume-education-text {
     display: inline-block;
     max-width: 600px;
     text-align: justify;
     margin-bottom: 100px;
+}
+
+#about-me-text {
+    text-align: left;
+    margin-right: 50px;
 }
 
 #image-info-description {
