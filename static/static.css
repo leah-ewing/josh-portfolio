@@ -176,3 +176,15 @@
         column-count: 1;
     }
 }
+
+
+/* Editable Field Styling */
+
+#admin-login-logo a {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    right: 10px;
+    font-size: 30px;  
+    text-decoration: none;  
+}
