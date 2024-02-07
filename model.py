@@ -53,6 +53,18 @@ class Slideshow(db.Model):
     slideshow_image_category = db.Column(db.String)
 
 
+class Admin(db.Model):
+    """ Admin user credentials """
+
+    __tablename__ = 'admin_user'
+
+    admin_user_id = db.Column(db.Integer, 
+                              autoincrement = True,
+                              primary_key = True)
+    admin_user_username = db.Column(db.String, unique = True)
+    admin_user_password = db.Column(db.String)
+
+
 if __name__ == '__main__':
     from server import app
     

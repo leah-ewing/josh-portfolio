@@ -1,6 +1,6 @@
 """CRUD operations."""
 
-from model import db, connect_to_db, Trip, Image, Slideshow
+from model import db, connect_to_db, Trip, Image, Slideshow, Admin
 
 
 def create_trip(trip_name, trip_location, trip_date, trip_description):
@@ -40,6 +40,18 @@ def create_slideshow_image(slideshow_image_url, slideshow_image_category):
     db.session.commit()
 
     return new_slideshow_image
+
+
+def create_admin_user(username, password):
+    """ Creates a new admin user """
+
+    new_admin_user = Admin(admin_user_username = username, 
+                           admin_user_password = password)
+
+    db.session.add(new_admin_user)
+    db.session.commit()
+
+    return new_admin_user
 
 
 def get_trip_by_name(trip_name):
@@ -108,6 +120,18 @@ def get_slideshow_images_from_category(slideshow_image_category):
             slideshow_image_list.append(slideshow_image.slideshow_image_url)
 
     return slideshow_image_list        
+
+
+def check_for_admin_user(username, password):
+    """ Returns a boolean representing whether an admin user is found in the database """
+
+    admin_users = Admin.query.all()
+
+    for admin_user in admin_users:
+        if admin_user.admin_user_username.lower() == username.lower():
+            if admin_user.admin_user_password.lower() == password.lower():
+                return True
+    return False
 
 
 if __name__ == '__main__':
