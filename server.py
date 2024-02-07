@@ -18,6 +18,9 @@ def homepage():
     return render_template("homepage.html")
 
 
+## login logic (correct/incorrect credentials, login session)
+
+
 @app.route('/about')
 def about_page():
     """ Directs a user to the 'about' page """
@@ -84,7 +87,6 @@ def image_info_page(image_id):
                            trip_location = trip.trip_location,
                            trip_date = trip.trip_date,
                            image_description = image.image_description)
-
 
 if __name__ == '__main__':
     connect_to_db(app)
